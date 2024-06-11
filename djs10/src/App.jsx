@@ -26,7 +26,7 @@ function App() {
    }, [])
 
   if (error) {                 // if error display this message
-    return <h1>{error.message}</h1>
+    return <h1 className='center-msg'>{error.message}</h1>
   }
 
 
