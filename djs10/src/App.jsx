@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react'
+
 import React from 'react'
 
 
@@ -14,7 +14,7 @@ function App() {
         setPosts(data)
 
         if (!response.ok) {
-            throw Error("Something went wrong, check resource")
+            throw Error("Data Fetching Failed")
         }
 
       } catch (err) {
@@ -23,13 +23,28 @@ function App() {
       }
     }
     addPosts()  // call function
-  }, [])
+   }, [])
 
-     
+  if (error) {                 // if error display this message
+    return <h1>{error.message}</h1>
+  }
+
 
 
   return (
-   <h1>Posts</h1>
+    <div>
+      <h1>Posts</h1>
+      <ul>
+        {posts.map(post => (
+          <li key={post.id}>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+
+          </li>
+        ))}
+      </ul>
+    </div>
+  
   
   )
 }
