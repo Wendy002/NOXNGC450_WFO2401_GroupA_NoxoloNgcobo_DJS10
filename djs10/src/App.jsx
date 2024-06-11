@@ -34,10 +34,10 @@ function App() {
   return (
     <div>
       <h1>Posts</h1>
-      <ul>
+      <ul className=''>
         {posts.map(post => (
           <li key={post.id}>
-            <h3>{post.title}</h3>
+            <h3>{post.id}<span>.  </span>{post.title}</h3>
             <p>{post.body}</p>
 
           </li>
