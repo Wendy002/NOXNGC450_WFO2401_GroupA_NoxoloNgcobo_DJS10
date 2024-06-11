@@ -9,23 +9,23 @@ function App() {
   React.useEffect(()=>{    //set use effect hook for handling api calls
     async function addPosts(){
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts')          //fetch  data and set it to setposts
         const data = await response.json()
-        console.log(data)
+        setPosts(data)
 
         if (!response.ok) {
             throw Error("Something went wrong, check resource")
         }
 
       } catch (err) {
-        setError(err)
+        setError(err)        //set error to err
         
       }
-
     }
-
-
+    addPosts()  // call function
   }, [])
+
+     
 
 
   return (
