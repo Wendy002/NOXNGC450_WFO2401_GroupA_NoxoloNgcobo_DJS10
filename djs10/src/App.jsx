@@ -6,9 +6,12 @@ function App() {
   const [posts, setPosts] = React.useState([]) // initialise state for  blog posts
   const [error, setError] = React.useState(null) //  initialise state for  error messages
 
+  React.useEffect(()=>{   
 
 
-  
+  }, [])
+
+
   return (
    <h1>Posts</h1>
   
