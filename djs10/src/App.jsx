@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <h1>Posts</h1>
-      <ul className=''>
+      <ul className='remove-list-style'>
         {posts.map(post => (
           <li key={post.id}>
             <h3>{post.id}<span>.  </span>{post.title}</h3>

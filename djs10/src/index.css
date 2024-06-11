@@ -1,3 +1,7 @@
 *{
   text-align: center;
 }
+
+.remove-list-style{
+  list-style: none;
+}
